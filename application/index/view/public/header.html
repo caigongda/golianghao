@@ -10,19 +10,159 @@
 	<meta name="robots" content="All" />
 	<meta http-equiv="Content-Language" content="zh_CN" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link href="__CSS__/index.css" rel="stylesheet" type="text/css" />
 	<link href="__CSS__/global.css" rel="stylesheet" type="text/css" />
+	<link href="__CSS__/index.css" rel="stylesheet" type="text/css" />
+	{if($iscurent=='Community')}
+	<link href="__CSS__/community.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='Activity')}
+	<link href="__CSS__/activity.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='Partner')}
+	<link href="__CSS__/partner.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='Phone')}
+	<link href="__CSS__/phone.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='Mobile')}
+	<link href="__CSS__/mobile.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='Fphone')}
+	<link href="__CSS__/fphone.css" rel="stylesheet" type="text/css" />
+	{/if}
 </head>
 <body>
 <header class="index-header">
 	<div class="index-header-top">
-		
+		<div class="header-top-wrap common-width common-cboth">
+			<div class="header-top-left">
+				欢迎来到全国靓号交易平台<span class="mobile-wrap"><span class="icon icon-phone"></span>手机逛商城</span>
+			</div>
+			<div class="header-top-right">
+				<div class="loggedin-wrap">
+					您好
+					<a class="user-name">游客名游客名游客名</a>
+				</div>
+				<div class="nologin-wrap hidden">
+					<a>登录</a>
+					<a>注册</a>
+				</div>
+				<ul class="top-list-wrap">
+					<li class="hover">
+						<a class="hover">我的订单<i class="icon icon-down"></i></a>
+						<div class="toggle-wrap">
+							
+						</div>
+					</li>
+					<li class="hover">
+						<a>我的收藏<i class="icon icon-down"></i></a>
+						<div class="toggle-wrap">
+							
+						</div>
+					</li>
+					<li class="hover">
+						<a>意见/投诉<i class="icon icon-down"></i></a>
+						<div class="toggle-wrap">
+							
+						</div>
+					</li>
+					<li class="hover">
+						<a>官方微信<i class="icon icon-down"></i></a>
+						<div class="toggle-wrap" style="width: 130px;">
+							<img src="__STATIC__/imgs/wechart.jpg">
+						</div>
+					</li>
+					<li class="hover">
+						<a>网站导航<i class="icon icon-down"></i></a>
+						<div class="toggle-wrap"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div class="index-header-mid">
-		
+		<div class="header-mid-wrap">
+			<div class="logo-wrap"></div>
+			<div class="middle-wrap">
+				<div class="address-select-wrap">
+					<h3 class="curent-address">
+						<i class="icon icon-address"></i>武汉
+					</h3>
+					<div class="switch-address">
+						<h4>切换城市<i class="icon icon-down"></i></h4>
+						<div class="city-wrap">
+							<ul class="city-ul">
+				              	<li class="hovered" value="0">热门城市</li>
+				                <li value="1">ABCD</li>
+				                <li value="2">EFGH</li>
+				                <li value="3">JKL</li>
+				                <li value="4">MNPQR</li>
+				                <li value="5">STW</li>
+				                <li value="6">XYZ</li>
+				            </ul>
+				            <div id="c0" class="">
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            	<span>武汉</span>
+				            </div>
+				            <div id="c1" class="hidden">
+				            	ABCD
+				            </div>
+				            <div id="c2" class="hidden">
+				            	EFGH
+				            </div>
+				            <div id="c3" class="hidden">
+				            	
+				            </div>
+				            <div id="c4" class="hidden">
+				            	
+				            </div>
+				            <div id="c5" class="hidden">
+				            	
+				            </div>
+				            <div id="c6" class="hidden">
+				            	
+				            </div>
+						</div>
+					</div>
+				</div>
+				<div class="search-wrap">
+					<ul class="number-kind-sel">
+						<li><span>手机号码</span><i class="icon icon-down"></i>
+							<div>
+								<span>固定电话</span>
+								<span>400电话</span>
+							</div>
+						</li>
+					</ul>
+					<input type="text" name="" placeholder="请输入包含数字">
+					<button class="ripple">搜索</button>
+				</div>
+			</div>
+			<div class="main-word-wrap">
+				
+			</div>
+		</div>
 	</div>
 	<nav class="index-header-bot">
-		
+		<div class="header-nav-wrap">
+			<ul>
+				<li class="ripple {$iscurent=='Index'?'nav-active':''}"><a href="{:url('Index/index')}">首页</a></li>
+				<li class="ripple {$iscurent=='Activity'?'nav-active':''}"><a href="{:url('Activity/index')}">最新活动</a></li>
+				<li class="ripple {$iscurent=='Mobile'?'nav-active':''}"><a href="{:url('Mobile/index')}">手机靓号</a></li>
+				<li class="ripple {$iscurent=='Phone'?'nav-active':''}"><a href="{:url('Phone/index')}">固定电话</a></li>
+				<li class="ripple {$iscurent=='Fphone'?'nav-active':''}"><a href="{:url('Fphone/index')}">400电话</a></li>
+				<li class="ripple {$iscurent=='Community'?'nav-active':''}"><a href="{:url('Community/index')}">靓号社区</a></li>
+				<li class="ripple {$iscurent=='Numbercus'?'nav-active':''}"><a href="{:url('Numbercus/index')}">靓号定制</a></li>
+				<li class="ripple {$iscurent=='Partner'?'nav-active':''}"><a href="{:url('Partner/index')}">合作伙伴</a></li>
+			</ul>
+			<span class="service-wrap"><a href="#">服务中心</a></span>
+		</div>
 	</nav>
 </header>
 

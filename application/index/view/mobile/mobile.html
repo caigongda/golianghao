@@ -1,0 +1,236 @@
+{include file="public/header" /}
+<div class="mobile-header-img">
+	<img src="https://static1.jihaoba.com/home/images/index_banner2.jpg" alt="">
+</div>
+<div class="mobile-con-wrap" id="mobile" v-cloak>
+	<div class="mobile-con-left">
+		<div class="mobile-condition-wrap">
+			<h4>筛选条件</h4>
+			<div class="line"></div>
+			<div class="condition-list">
+				<h4>优惠</h4>
+				<div class="condition-all">
+					<span class="mcolor">不限</span>
+					<span>折扣</span>
+					<span>秒杀</span>
+					<span>活动</span>
+				</div>
+			</div>
+			<div class="condition-list">
+				<h4>地区</h4>
+				<div class="condition-all">
+					<span class="mcolor">不限</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>武汉</span>
+					<span>更多</span>
+				</div>
+			</div>
+			<div class="condition-list">
+				<h4>运营商</h4>
+				<div class="fix-flex">
+					<span class="mcolor">不限</span>
+					<span>移动</span>
+					<span>联通</span>
+					<span>电信</span>
+					<span>虚拟运营商</span>
+				</div>
+			</div>
+			<div class="condition-list">
+				<h4>号段</h4>
+				<div class="condition-all">
+					<span class="mcolor">不限</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>177</span>
+					<span>更多</span>
+				</div>
+			</div>
+			<div class="condition-list">
+				<h4>价格</h4>
+				<div class="fix-flex">
+					<span class="mcolor">不限</span>
+					<span>0-200元</span>
+					<span>200-500元</span>
+					<span>500-1000元</span>
+					<span>1000-2000元</span>
+					<span>2000-5000元</span>
+					<span>5000-10000元</span>
+					<span>10000元以上</span>
+				</div>
+			</div>
+			<div class="condition-list noline">
+				<h4>规律</h4>
+				<div class="fix-flex">
+					<span class="mcolor">不限</span>
+					<span>中间AAAAA</span>
+					<span>中间AAAAA</span>
+					<span>中间AABB</span>
+					<span>中间AAABB</span>
+					<span>中间AABBB</span>
+					<span>更多</span>
+				</div>
+			</div>
+		</div>
+		<div class="buy-flow-wrap">
+			<h4>购买流程</h4>
+			<div class="line"></div>
+			<div class="flow-img">
+				<img src="https://static1.jihaoba.com/home/images/liucheng.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="mobile-con-right">
+		<div><span>已选条件：</span><div class="condition-tag">武汉<span class="icon icon-del del-condition"></span></div></div>
+		<div>
+			<span>模糊搜索：</span>
+			<div class="mobile-con-btn">
+				<div class="search-icon-wrap"><span class="icon icon-search"></span></div>
+				<input type="text" name="" placeholder="请输入搜索关键字">
+				<button class="search-btn ripple">搜索</button>
+			</div>
+		</div>
+		<div>
+			<span>精准定位：</span>
+			<div class="single-number-wrap">
+				<input type="text" readonly="readonly" v-model="number[0]" maxlength="1" class="">
+				<input type="text" v-model="number[1]" maxlength="1" class="" @input="isinput(1)">
+				<input type="text" v-model="number[2]" maxlength="1" class="" @input="isinput(2)">
+				<span></span>
+				<input type="text" v-model="number[3]" maxlength="1" class="" @input="isinput(3)">
+				<input type="text" v-model="number[4]" maxlength="1" class="" @input="isinput(4)">
+				<input type="text" v-model="number[5]" maxlength="1" class="" @input="isinput(5)">
+				<input type="text" v-model="number[6]" maxlength="1" class="" @input="isinput(6)">
+				<span></span>
+				<input type="text" v-model="number[7]" maxlength="1" class="" @input="isinput(7)">
+				<input type="text" v-model="number[8]" maxlength="1" class="" @input="isinput(8)">
+				<input type="text" v-model="number[9]" maxlength="1" class="" @input="isinput(9)">
+				<input type="text" v-model="number[10]" maxlength="1" class="" @input="isinput(10)">
+				<button class="acc-btn ripple" @click="focusnumber">搜索</button>
+			</div>
+		</div>
+		<div class="mobile-search-header">
+			<div class="search-header-left">
+				<button class="mcolor">综合排序</button>
+				<button>号码排序</button>
+				<button>价格排序</button>
+				<button>话费排序</button>
+				<button>更新时间</button>
+			</div>
+			<div class="search-header-right">
+				<button disabled="disabled">上一页</button>
+				<button>下一页</button>
+			</div>
+		</div>
+		<div class="mobile-search-result">
+			<div class="number-card">
+				<div class="card-tag"></div>
+				<div class="card-tag-t">7折</div>
+				<div class="card_cont">
+					<h4 class="num-detail">1777180<span class="num-color">6167</span></h4>
+					<p>
+						<span class="num-price num-color">￥5800</span>
+						<span class="old-price">￥4800</span>
+						<span class="price-info">(含话费1000)</span>
+					</p>
+					<p>
+						<span class="num-address">温州移动</span>
+						<span class="collect-price"><i class="icon icon-col"></i>收藏</span>
+						<span class="add-cart"><i class="icon icon-cart"></i>加入购物车</span>
+					</p>
+				</div>
+			</div>
+			<div class="number-card">
+				<div class="card-tag"></div>
+				<div class="card-tag-t">7折</div>
+				<div class="card_cont">
+					<h4 class="num-detail">1777180<span class="num-color">6167</span></h4>
+					<p>
+						<span class="num-price num-color">￥5800</span>
+						<span class="old-price">￥4800</span>
+						<span class="price-info">(含话费1000)</span>
+					</p>
+					<p>
+						<span class="num-address">温州移动</span>
+						<span class="collect-price"><i class="icon icon-col"></i>收藏</span>
+						<span class="add-cart"><i class="icon icon-cart"></i>加入购物车</span>
+					</p>
+				</div>
+			</div>
+			<div class="number-card">
+				<div class="card-tag"></div>
+				<div class="card-tag-t">7折</div>
+				<div class="card_cont">
+					<h4 class="num-detail">1777180<span class="num-color">6167</span></h4>
+					<p>
+						<span class="num-price num-color">￥5800</span>
+						<span class="old-price">￥4800</span>
+						<span class="price-info">(含话费1000)</span>
+					</p>
+					<p>
+						<span class="num-address">温州移动</span>
+						<span class="collect-price"><i class="icon icon-col"></i>收藏</span>
+						<span class="add-cart"><i class="icon icon-cart"></i>加入购物车</span>
+					</p>
+				</div>
+			</div>
+			<div class="number-card">
+				<div class="card-tag"></div>
+				<div class="card-tag-t">7折</div>
+				<div class="card_cont">
+					<h4 class="num-detail">1777180<span class="num-color">6167</span></h4>
+					<p>
+						<span class="num-price num-color">￥5800</span>
+						<span class="old-price">￥4800</span>
+						<span class="price-info">(含话费1000)</span>
+					</p>
+					<p>
+						<span class="num-address">温州移动</span>
+						<span class="collect-price"><i class="icon icon-col"></i>收藏</span>
+						<span class="add-cart"><i class="icon icon-cart"></i>加入购物车</span>
+					</p>
+				</div>
+			</div>
+			<div class="number-card">
+				<div class="card-tag"></div>
+				<div class="card-tag-t">7折</div>
+				<div class="card_cont">
+					<h4 class="num-detail">1777180<span class="num-color">6167</span></h4>
+					<p>
+						<span class="num-price num-color">￥5800</span>
+						<span class="old-price">￥4800</span>
+						<span class="price-info">(含话费1000)</span>
+					</p>
+					<p>
+						<span class="num-address">温州移动</span>
+						<span class="collect-price"><i class="icon icon-col"></i>收藏</span>
+						<span class="add-cart"><i class="icon icon-cart"></i>加入购物车</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="search-result-page">
+			<ul class="pagination">
+			    <li v-if="cur>1"><button class="ripple" v-on:click="cur--,pageClick()">«上一页</button></li>
+		        <li v-if="cur==1"><button class="banclick ripple">«上一页</button></li>
+		        <li v-for="index in indexs">
+		            <button class="ripple" v-on:click="btnClick(index)" v-bind:class="{ 'active': cur == index}">{{ index }}</button>
+		        </li>
+		        <li v-if="cur!=all"><button class="ripple" v-on:click="cur++,pageClick()">下一页»</button></li>
+		        <li v-if="cur == all"><button class="banclick ripple">下一页»</button></li>
+		        <li><button class="ripple">共<i>{{all}}</i>页</button></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{include file="public/pubfooter" /}
