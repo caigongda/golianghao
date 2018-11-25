@@ -30,6 +30,12 @@
 	{if($iscurent=='Fphone')}
 	<link href="__CSS__/fphone.css" rel="stylesheet" type="text/css" />
 	{/if}
+	{if($iscurent=='Numbercus')}
+	<link href="__CSS__/Numbercus.css" rel="stylesheet" type="text/css" />
+	{/if}
+	{if($iscurent=='vipintrod')}
+	<link href="__CSS__/vipintrod.css" rel="stylesheet" type="text/css" />
+	{/if}
 </head>
 <body>
 <header class="index-header">
@@ -161,7 +167,16 @@
 				<li class="ripple {$iscurent=='Numbercus'?'nav-active':''}"><a href="{:url('Numbercus/index')}">靓号定制</a></li>
 				<li class="ripple {$iscurent=='Partner'?'nav-active':''}"><a href="{:url('Partner/index')}">合作伙伴</a></li>
 			</ul>
-			<span class="service-wrap"><a href="#">服务中心</a></span>
+			<span class="service-wrap">
+				<a href="#">服务中心</a>
+				<ul>
+					<li><a href="{:url('Member/register')}">快速注册</a></li>
+					<li><a href="{:url('Member/login')}">会员登录</a></li>
+					<li><a href="{:url('Member/vipintrod')}">VIP会员介绍</a></li>
+					<li><a>广告服务</a></li>
+					<li><a>意见/投诉</a></li>
+				</ul>
+			</span>
 		</div>
 	</nav>
 </header>

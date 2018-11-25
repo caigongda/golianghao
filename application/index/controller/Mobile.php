@@ -6,4 +6,8 @@ class Mobile extends Controller{
     	$this->assign('iscurent','Mobile');
         return $this->fetch('mobile');
     }
+    public function mobiledetail(){//号码详情
+    	$this->assign('iscurent','Mobile');
+    	return $this->fetch('mobiledetail');
+    }
 }

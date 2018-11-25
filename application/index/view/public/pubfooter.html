@@ -140,11 +140,22 @@
       <div></div>
     </div>
 </div>
+<div class="fix-to-top" onclick="go.toTop()">
+	<span class="icon icon-top"></span>
+</div>
 <script type="text/javascript" src="__JS__/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="__JS__/global.js"></script>
 {if($iscurent=='Mobile')}
 	<script type="text/javascript" src="__JS__/vue.js"></script>
 	<script type="text/javascript" src="__JS__/mobile.js"></script>
+{/if}
+{if($iscurent=='Phone')}
+	<script type="text/javascript" src="__JS__/vue.js"></script>
+	<script type="text/javascript" src="__JS__/phone.js"></script>
+{/if}
+{if($iscurent=='Fphone')}
+	<script type="text/javascript" src="__JS__/vue.js"></script>
+	<script type="text/javascript" src="__JS__/fphone.js"></script>
 {/if}
 <script type="text/javascript">
 	var timer;
@@ -220,13 +231,20 @@
 			$(this).children("div").hide();
 		});
 		$(".number-kind-sel div span").click(function(){
+			var oldtext=$(".number-kind-sel li>span").text();
 			var text=$(this).text();
+			$(this).text(oldtext);
 			$(".number-kind-sel li>span").text(text);
 			$(this).parent().hide();
 		});
 		$(".title-right>div>span").hover(function(){
 			$(this).addClass("kindseled").siblings().removeClass("kindseled");
-		})
+		});
+		$(".service-wrap").hover(function(){
+			$(this).children("ul").show();
+		},function(){
+			$(this).children("ul").hide();
+		});
 		banner.init();
 		banner.switchev();
 		numberevents();
